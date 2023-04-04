@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import { Header } from "./components/Header";
+import { RestaurantContext } from "./Context/RestaurantContext";
+import { Home } from "./pages/Home";
+import { restaurants } from "./data";
+import { Favourite } from "./pages/Favourite";
+import { RestaurantDetails } from "./pages/RestaurantDetails";
+import { FavoriteRestaurantsContext, FavoriteRestaurantsProvider } from "./Context/FavContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <RestaurantContext.Provider value={{ restaurants }}>
+        <FavoriteRestaurantsProvider >
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/favourite" element={<Favourite />} />
+            <Route path="details/:id" element={<RestaurantDetails />} />
+          </Routes>
+        </FavoriteRestaurantsProvider>
+      </RestaurantContext.Provider>
+    </BrowserRouter>
   );
 }
 

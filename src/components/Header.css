@@ -1,0 +1,25 @@
+.header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 0 30px;
+}
+
+a {
+  align-items: center;
+  color: #d46b82;
+  text-decoration: none;
+}
+
+.btn {
+  /* background-color: aqua; */
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;  
+  color: #FFFFFF;
+  border: none;
+}
+
+

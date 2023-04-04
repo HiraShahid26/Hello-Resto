@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+App {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  width: 300px;
+  height: 250px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  color: #d46b82;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.detail-card {
+  border-radius: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 40px auto 0 auto;
+  align-self: self-end;
+  width: 90vw;
+  padding-top: 20px;
+}
+
+.card {
+  border-radius: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  margin: 0;
+}
+
+.name {
+  color:black
+}
+
+.m {
+  color: black;
+}
+
+.menu {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  width: 90vw;
+  border-radius: 20px;
+  margin: 20px auto 0;
+  background-color: rgba(255, 192, 203, 0.237);
 }
 
-.App-link {
-  color: #61dafb;
+.description {
+  padding-left: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heart {
+  margin-top: 7px;
+  border: none;
+  width: 50px;
+  background-color: white;
+}
+
+.modal {
+  display: flex;
+  display: flex;
+  /* flex-direction: column; */
+  position: fixed;
+  background: white;
+  width: 40%;
+  /* height: 40%; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid #d46b82;
+
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;  
+  color: black;
+  background-color: #d46b82;
+  border: none;
+  width: 150px;
+}
+
+.p {
+  width: 30vw;
+  color: black;
+  background-color: rgba(255, 192, 203, 0.594);
+  border-radius: 10px;
+  padding: 10px;
 }
